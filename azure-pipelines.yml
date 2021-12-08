@@ -31,4 +31,14 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
     StoreAsTar: true
-
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'xama'
+    appSlug: 'Organization-Romulo/XamarinDroid'
+    appFile: '/Users/runner/work/1/b/Release/com.companyname.xfgamingstore.apk'
+    buildVersion: '1'
+    symbolsOption: 'Android'
+    releaseNotesOption: 'input'
+    releaseNotesInput: 'teste build'
+    destinationType: 'groups'
+    distributionGroupId: '41df8291-152e-419b-a790-59a30bd03ffb'
