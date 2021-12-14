@@ -1,5 +1,7 @@
 ﻿using System;
-
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -14,6 +16,9 @@ namespace XFGamingStore.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            AppCenter.Start("621ba25c-9629-46a8-a2ef-307c7ad61287",
+                   typeof(Analytics), typeof(Crashes));
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
